@@ -126,6 +126,14 @@ header {
   height: 72px;
 }
 
-main {
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
   margin-top: 72px;
+  flex: 1 1 auto;
 }

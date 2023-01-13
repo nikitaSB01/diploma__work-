@@ -74,11 +74,19 @@ header {
   }
 }
 //main//////////////////////////////////////
-main {
+.wrapper{ //для того чтобы прижать footer вниз
+  min-height: 100%;//для того чтобы прижать footer вниз
+  overflow: hidden;//для того чтобы прижать footer вниз
+  display: flex;//для того чтобы прижать footer вниз
+  flex-direction: column;//для того чтобы прижать footer вниз
+}
+.main {
   margin-top: 72px;
+  flex: 1 1 auto; //для того чтобы прижать footer вниз
 }
 .main {
   &__body {
+    
   }
 
   &__search-form {

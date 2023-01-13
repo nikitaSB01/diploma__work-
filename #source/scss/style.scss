@@ -1,0 +1,127 @@
+@import "knight.scss";
+/*!обнуление/////////////////////////////////*/
+$fz: 60px;
+//сокращение
+%tplborder {
+  border-bottom: 10px dashed rgb(228, 16, 16);
+} //шаблон
+@mixin fontz($fz, $c, $bc) {
+  font-size: $fz;
+  color: $c;
+  background-color: $bc;
+} //миксы
+body{
+  min-width: 1124px;
+}
+
+.header {
+  &__body {
+  }
+
+  &__logo {
+  }
+
+  &__buttons {
+  }
+}
+.item-header {
+  &__button-entrance {
+  }
+
+  &__button-basket {
+  }
+}
+.main {
+  &__body {
+  }
+
+  &__search-form {
+  }
+
+  &__header {
+  }
+
+  &__cards {
+  }
+
+  &__column {
+  }
+}
+.item-main {
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__time {
+  }
+}
+.item-about {
+  &__icon {
+  }
+}
+.footer {
+  &__body {
+  }
+
+  &__header {
+  }
+
+  &__logo {
+  }
+
+  &__row {
+  }
+
+  &__column {
+  }
+
+  &__button {
+  }
+
+  &__column-button {
+  }
+
+  &__row-help {
+  }
+
+  &__nav {
+  }
+}
+.links-footer {
+  &__language {
+  }
+
+  &__sending {
+  }
+
+  &__sending-logo {
+  }
+
+  &__sending-buttons {
+  }
+
+  &__facebook-button {
+  }
+
+  &__twitter-button {
+  }
+
+  &__inst-button {
+  }
+}
+.nav-footer {
+  &__links {
+  }
+
+  &__link {
+  }
+}
+.footer-button {
+  &__as {
+  }
+
+  &__gp {
+  }
+}

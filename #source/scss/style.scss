@@ -32,9 +32,7 @@ $fz: 60px;
 ///
 ///
 body {
-  max-width: 1124px;
-  width: 100%;
-  margin: 0px auto;
+  margin: 0px auto; 
   font-family: "Roboto";
 }
 //header///////////////////////////////////////
@@ -44,15 +42,16 @@ header {
   position: fixed;
   //background-color: rgb(244, 232, 232);
   z-index: 3;
+  box-shadow: 0 6px 4px -4px #d4dbe0;
+  background-color: #ffffff;
 }
+      //TODO сделать чтобы шапка была на 100% по браузеру
 .header {
   &__body {
-    background-color: #ffffff;
     margin-left: 81px;
     margin-right: 87px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 6px 4px -4px #d4dbe0;
   }
 
   &__logo {
@@ -87,7 +86,10 @@ header {
 }
 //main////////////////////////////////////////////////////
 .wrapper {
-  //для того чтобы прижать footer вниз
+  //для того чтобы ограичить контентную зону;
+  max-width: 1124px;
+  width: 100%;
+  margin: 0px auto;
   min-height: 100%; //для того чтобы прижать footer вниз
   overflow: hidden; //для того чтобы прижать footer вниз
   display: flex; //для того чтобы прижать footer вниз

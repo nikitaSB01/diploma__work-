@@ -18,6 +18,14 @@ $fz: 60px;
   max-height: $m-h;
   height: $h;
 }
+@mixin mww($m-w, $w) {
+  max-width: $m-w;
+  width: $w;
+}
+@mixin mhh($m-h, $h) {
+  max-height: $m-h;
+  height: $h;
+}
 // пример (@include fontz(20px, red, green);)
 //миксы
 ////////////////////////////////////////////
@@ -31,9 +39,11 @@ body {
 }
 //header///////////////////////////////////////
 header {
-  @include mwh(1024px, 100%, 72px, 100%);
+  @include mwh(1124px, 100%, 72px, 100%);
   top: 0px;
   position: fixed;
+  //background-color: rgb(244, 232, 232);
+  z-index: 3;
 }
 .header {
   &__body {
@@ -62,8 +72,10 @@ header {
     color: #000000;
     border: 1px solid #e0e0e0;
     border-radius: 10%;
-    font-weight: 600;
-    font-family: Roboto;
+    p {
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+    }
   }
 
   &__button-basket {
@@ -73,46 +85,115 @@ header {
     height: 72px;
   }
 }
-//main//////////////////////////////////////
-.wrapper{ //для того чтобы прижать footer вниз
+//main////////////////////////////////////////////////////
+.wrapper {
+  //для того чтобы прижать footer вниз
   min-height: 100%; //для того чтобы прижать footer вниз
   overflow: hidden; //для того чтобы прижать footer вниз
-  display: flex;//для того чтобы прижать footer вниз
-  flex-direction: column;//для того чтобы прижать footer вниз
+  display: flex; //для того чтобы прижать footer вниз
+  flex-direction: column; //для того чтобы прижать footer вниз
 }
 .main {
-  margin-top: 72px;
   flex: 1 1 auto; //для того чтобы прижать footer вниз
 }
 .main {
   &__body {
-    
+    padding-top: 72px;
+    padding-bottom: 80px;
   }
 
   &__search-form {
+    margin: 56px auto 56px auto;
+    @include mwh(962px, 100%, 24px, 100%);
+    box-sizing: border-box;
+
+    form {
+      border-bottom: 1px solid #757575;
+      opacity: 0.3;
+    }
+    input {
+      @include mwh(962px, 100%, 24px, 100%);
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #626262;
+    }
   }
 
   &__header {
+    margin: 0px auto 16px 81px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #1d1d1d;
   }
 
   &__cards {
+    margin: 0px 87px auto 81px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   &__column {
+    @include mwh(308px, 100%, 366px, 100%);
+    &:hover {
+      background: #f3efef;
+    }
   }
 }
 .item-main {
   &__title {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    h5 {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1d1d1d;
+    }
   }
 
   &__subtitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    h6 {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #626262;
+    }
   }
 
   &__time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 21px;
+      color: #1d1d1d;
+    }
   }
 }
 .item-about {
   &__icon {
+    @include mwh(308px, 100%, 256px, 100%);
   }
 }
 .footer {

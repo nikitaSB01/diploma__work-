@@ -18,6 +18,12 @@ $fz: 60px;
   max-height: $m-h;
   height: $h;
 }
+@mixin minwh($m-w, $w, $m-h, $h) {
+  min-width: $m-w;
+  width: $w;
+  min-height: $m-h;
+  height: $h;
+}
 @mixin mww($m-w, $w) {
   max-width: $m-w;
   width: $w;
@@ -170,6 +176,12 @@ header {
         @include mwh(368px, 100%, 256px, 100%);
       }
     }
+    @media (max-width: 321px) {
+      @include mwh(308px, 100%, 356px, 100%);
+      img {
+        @include mwh(308px, 100%, 246px, 100%);
+      }
+    }
   }
 }
 .item-main {
@@ -218,12 +230,15 @@ header {
 }
 
 .footer {
-  @include mwh(1124px, 100%, 552px, 100%);
-  background-color: rgb(101, 71, 71);
+  @include minwh(1124px, 100%, 552px, 100%);
+  background-color: #262626;
   &__body {
     margin: 0px 81px 0px 87px;
     background-color: #262626;
-
+    @media (max-width: 769px) {
+      margin: 0;
+      padding: 0px 8px;
+    }
     //????????????точно ли здесь надо установить d?
     display: flex;
     justify-content: space-between;
@@ -249,6 +264,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 321px) {
+      flex-direction: column;
+      row-gap: 23px;
+    }
   }
   &__column {
   }
@@ -264,6 +283,9 @@ header {
     display: flex;
     justify-content: center;
     column-gap: 40px;
+    @media (max-width: 321px) {
+      justify-content: start;
+    }
   }
 
   &__row-help {
@@ -332,12 +354,18 @@ header {
     &__link div {
       margin-bottom: 0px;
     }
+    @media (max-width: 321px) {
+      flex-direction: column;
+      row-gap: 23px;
+    }
   }
 }
 .footer-button {
-  &__as {
+  &__as img {
+    @include mwh(120px, 100%, 40px, 100%);
   }
 
-  &__gp {
+  &__gp img {
+    @include mwh(120px, 100%, 40px, 100%);
   }
 }

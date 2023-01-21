@@ -34,6 +34,9 @@ $fz: 60px;
 }
 // пример (@include fontz(20px, red, green);)
 //миксы
+.container {
+}
+////////////////////////////////////////////
 .main {
 
   &__body {
@@ -48,8 +51,7 @@ $fz: 60px;
   &__section-three {
   }
 }
-.container {
-}
+
 .section-one {
 
   &__item {

@@ -74,10 +74,6 @@ body {
   }
 
   &__section-one {
-    @include mwh(1124px, 100%, 364px, 100%);
-    //background-color: rgb(105, 61, 61);
-    background-image: url(img/img2/main__section-one/photo.png);
-    width: 100%;
   }
 
   &__section-two {
@@ -91,10 +87,23 @@ body {
   &__item {
   }
 }
-.time {
+.item {
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__time {
+  }
 }
-.nav {
-  &__item {
+.section-two {
+  @include mhh(80px, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  &__nav-item {
   }
 }
 .section-three {
@@ -113,6 +122,7 @@ body {
 }
 .cards-item {
   &__icon {
+    @include mwh(170px, 100%, 160px, 100%);
   }
 
   &__title {

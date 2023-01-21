@@ -1,0 +1,94 @@
+@import "knight.scss";
+/*!обнуление/////////////////////////////////*/
+$fz: 60px;
+//сокращение
+%tplborder {
+  border-bottom: 10px dashed rgb(228, 16, 16);
+  // пример (@extend %tplborder;)
+} //шаблон
+@mixin fontz($fz, $c, $bc) {
+  font-size: $fz;
+  color: $c;
+  background-color: $bc;
+}
+
+@mixin mwh($m-w, $w, $m-h, $h) {
+  max-width: $m-w;
+  width: $w;
+  max-height: $m-h;
+  height: $h;
+}
+@mixin minwh($m-w, $w, $m-h, $h) {
+  min-width: $m-w;
+  width: $w;
+  min-height: $m-h;
+  height: $h;
+}
+@mixin mww($m-w, $w) {
+  max-width: $m-w;
+  width: $w;
+}
+@mixin mhh($m-h, $h) {
+  max-height: $m-h;
+  height: $h;
+}
+// пример (@include fontz(20px, red, green);)
+//миксы
+.main {
+
+  &__body {
+  }
+
+  &__section-one {
+  }
+
+  &__section-two {
+  }
+
+  &__section-three {
+  }
+}
+.container {
+}
+.section-one {
+
+  &__item {
+  }
+}
+.time {
+}
+.nav {
+
+  &__item {
+  }
+}
+.section-three {
+
+  &__header {
+  }
+
+  &__cards {
+  }
+}
+.cards {
+
+  &__column {
+  }
+
+  &__item {
+  }
+}
+.cards-item {
+
+  &__icon {
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__pricee {
+  }
+}

@@ -38,26 +38,52 @@ $fz: 60px;
 ///
 ///
 body {
-  margin: 0px auto;
+  //margin: 0px auto;
   font-family: "Roboto", sans-serif;
 }
+.wrapper {
+  //для того чтобы ограичить контентную зону;
+  display: flex; //для того чтобы прижать footer вниз
+  min-height: 100%; //для того чтобы прижать footer вниз
+  overflow: hidden; //для того чтобы прижать footer вниз
+  flex-direction: column; //для того чтобы прижать footer вниз
+}
+.container {
+  box-sizing: content-box;
+  max-width: 956px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  @media (max-width: 1124px) {
+    max-width: 970px;
+  }
+  @media (max-width: 992px) {
+    max-width: 750px;
+  }
+  @media (max-width: 769px) {
+    max-width: none;
+    padding: 0px 8px;
+  }
+}
+
 //header///////////////////////////////////////
 header {
-  @include mwh(1124px, 100%, 72px, 100%);
+  width: 100%;
+  //@include mwh(1124px, 100%, 72px, 100%);
   top: 0px;
   position: fixed;
   //background-color: rgb(244, 232, 232);
   z-index: 3;
-  box-shadow: 0 6px 4px -4px #d4dbe0;
   background-color: #ffffff;
 }
 //TODO сделать чтобы шапка была на 100% по браузеру
 .header {
   &__body {
-    margin-left: 81px;
-    margin-right: 87px;
+    //margin-left: 81px;
+    //margin-right: 87px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 6px 4px -4px #d4dbe0;
+
     @media (max-width: 769px) {
       margin: 0px;
     }
@@ -94,19 +120,12 @@ header {
     margin-left: 16px;
     width: 40px;
     height: 72px;
+    img {
+      @include mwh(40px, 100%, 72px, 100%);
+    }
   }
 }
 //main////////////////////////////////////////////////////
-.wrapper {
-  //для того чтобы ограичить контентную зону;
-  max-width: 1124px;
-  width: 100%;
-  margin: 0px auto;
-  min-height: 100%; //для того чтобы прижать footer вниз
-  overflow: hidden; //для того чтобы прижать footer вниз
-  display: flex; //для того чтобы прижать footer вниз
-  flex-direction: column; //для того чтобы прижать footer вниз
-}
 .main {
   flex: 1 1 auto; //для того чтобы прижать footer вниз
 }
@@ -138,7 +157,7 @@ header {
   }
 
   &__header {
-    margin: 0px auto 16px 81px;
+    margin: 0px auto 16px 0px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -154,14 +173,14 @@ header {
   }
 
   &__cards {
-    margin: 0px 87px auto 81px;
+    //margin: 0px 87px auto 81px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
     @media (max-width: 769px) {
       margin: 0px 0px 0px 0px;
-      padding: 0px 8px;
+      //padding: 0px 8px;
     }
   }
 
@@ -230,16 +249,23 @@ header {
 }
 
 .footer {
-  @include minwh(1124px, 100%, 552px, 100%);
+  //@include minwh(1124px, 100%, 552px, 100%);
   background-color: #262626;
   &__body {
-    margin: 0px 81px 0px 87px;
+    //margin: 0px 81px 0px 87px;
     background-color: #262626;
     @media (max-width: 769px) {
+      @include mww(768px, 100%);
+
       margin: 0;
       padding: 0px 8px;
     }
-    //????????????точно ли здесь надо установить d?
+    @media (max-width: 441px) {
+      @include mww(420px, 100%);
+      margin: 0;
+      padding: 0px 8px;
+    }
+    //????????????точно ли здесь надо установить df?
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -264,7 +290,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    @media (max-width: 321px) {
+    @media (max-width: 441px) {
       flex-direction: column;
       row-gap: 23px;
     }
@@ -283,8 +309,8 @@ header {
     display: flex;
     justify-content: center;
     column-gap: 40px;
-    @media (max-width: 321px) {
-      justify-content: start;
+    @media (max-width: 441px) {
+      justify-content: center;
     }
   }
 
@@ -354,7 +380,7 @@ header {
     &__link div {
       margin-bottom: 0px;
     }
-    @media (max-width: 321px) {
+    @media (max-width: 441px) {
       flex-direction: column;
       row-gap: 23px;
     }

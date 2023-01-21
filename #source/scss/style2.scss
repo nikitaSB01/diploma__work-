@@ -34,6 +34,10 @@ $fz: 60px;
 }
 // пример (@include fontz(20px, red, green);)
 //миксы
+html,
+body {
+  height: 100%;
+}
 body {
   //margin: 0px auto;
   font-family: "Roboto", sans-serif;
@@ -62,6 +66,7 @@ body {
   }
 }
 ////////////////////////////////////////////
+
 .main {
   flex: 1 1 auto; //для того чтобы прижать footer вниз
 
@@ -69,6 +74,10 @@ body {
   }
 
   &__section-one {
+    @include mwh(1124px, 100%, 364px, 100%);
+    //background-color: rgb(105, 61, 61);
+    background-image: url(img/img2/main__section-one/photo.png);
+    width: 100%;
   }
 
   &__section-two {

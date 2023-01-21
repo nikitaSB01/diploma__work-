@@ -34,10 +34,36 @@ $fz: 60px;
 }
 // пример (@include fontz(20px, red, green);)
 //миксы
+body {
+  //margin: 0px auto;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  //для того чтобы ограичить контентную зону;
+  display: flex; //для того чтобы прижать footer вниз
+  min-height: 100%; //для того чтобы прижать footer вниз
+  overflow: hidden; //для того чтобы прижать footer вниз
+  flex-direction: column; //для того чтобы прижать footer вниз
+}
 .container {
+  box-sizing: content-box;
+  max-width: 956px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  @media (max-width: 1124px) {
+    max-width: 970px;
+  }
+  @media (max-width: 992px) {
+    max-width: 750px;
+  }
+  @media (max-width: 769px) {
+    max-width: none;
+    padding: 0px 8px;
+  }
 }
 ////////////////////////////////////////////
 .main {
+  flex: 1 1 auto; //для того чтобы прижать footer вниз
 
   &__body {
   }
@@ -53,19 +79,16 @@ $fz: 60px;
 }
 
 .section-one {
-
   &__item {
   }
 }
 .time {
 }
 .nav {
-
   &__item {
   }
 }
 .section-three {
-
   &__header {
   }
 
@@ -73,7 +96,6 @@ $fz: 60px;
   }
 }
 .cards {
-
   &__column {
   }
 
@@ -81,7 +103,6 @@ $fz: 60px;
   }
 }
 .cards-item {
-
   &__icon {
   }
 

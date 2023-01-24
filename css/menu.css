@@ -77,13 +77,17 @@ img {
 }
 
 /*!обнуление/////////////////////////////////*/
+@font-face {
+  font-family: "Roboto-Regular"; /* Имя шрифта */
+  src: url(fonts/Roboto-Regular.ttf) format(truetype); /* Путь к файлу со шрифтом */
+}
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 .wrapper {
@@ -94,7 +98,6 @@ body {
 }
 
 .container {
-  box-sizing: content-box;
   max-width: 956px;
   margin: 0 auto;
   padding: 0px 15px;
@@ -119,10 +122,17 @@ body {
 .main {
   flex: 1 1 auto;
 }
-.main__section-bacground {
-  min-width: 956px;
+.main__section-one {
+  max-width: 1124px;
   width: 100%;
-  min-height: 364px;
+  max-height: 364px;
+  height: 100%;
+  margin: 0 auto;
+}
+.main__section-bacground {
+  max-width: 1124px;
+  width: 100%;
+  max-height: 364px;
   height: 100%;
   background-image: url("../img/img2/main.one/photo.png");
   padding: 80px 0px;
@@ -130,13 +140,14 @@ body {
 .main__section-two {
   max-height: 80px;
   height: 100%;
-  padding: 31px 0px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
 }
+.container-section-bacground {
+  max-width: 956px;
+  width: 100%;
+  max-height: 364px;
+  height: 100%;
+}
+
 .section-one__item {
   background-color: rgb(255, 255, 255);
   max-width: 389px;
@@ -153,7 +164,7 @@ body {
   padding-bottom: 62px;
 }
 .item__title h2 {
-  font-family: "Roboto";
+  font-family: "Roboto-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -166,7 +177,7 @@ body {
   align-items: center;
 }
 .item__subtitle h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -179,7 +190,7 @@ body {
   padding: 8px 16px;
 }
 .item__time .btn p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -187,9 +198,17 @@ body {
   color: #ffffff;
 }
 
+.section-two__nav {
+  padding: 31px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
 .section-two__nav-item {
   text-decoration: none;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto-Regular" sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -201,16 +220,13 @@ body {
 .section-two__nav-item:hover {
   color: #327430;
 }
-.section-two__nav-item:visited {
-  color: #d41919;
-}
 
 .section-three__header {
   padding-top: 56px;
   padding-bottom: 32px;
 }
 .section-three__header h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -256,26 +272,26 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.cards-item__title {
-  font-family: "Roboto", sans-serif;
+.cards-item__title h5 {
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #1d1d1d;
 }
-.cards-item__subtitle {
-  font-family: "Roboto", sans-serif;
+.cards-item__subtitle h6 {
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 21px;
   color: #626262;
 }
-.cards-item__pricee {
-  font-family: "Roboto", sans-serif;
+.cards-item__pricee p {
+  font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   line-height: 21px;
   color: #1d1d1d;

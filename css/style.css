@@ -182,7 +182,7 @@ header {
 }
 @media (max-width: 769px) {
   .main__body {
-    padding-bottom: 48px;
+    padding-bottom: 8px;
   }
 }
 .main__search-form {

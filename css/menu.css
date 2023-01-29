@@ -142,6 +142,14 @@ body {
   background-image: url("../img/img2/main.one/photo.png");
   padding: 80px 0px;
 }
+@media (max-width: 440px) {
+  .main__section-bacground {
+    padding: 0px;
+    width: 100%;
+    max-height: 255px;
+    height: 100%;
+  }
+}
 .main__section-two {
   max-height: 80px;
   height: 100%;
@@ -311,9 +319,6 @@ body {
   .cards-item__flex-two {
     padding: 0px;
   }
-}
-.cards-item__title-subtitle {
-  word-wrap: break-word;
 }
 .cards-item__title-subtitle h5 {
   font-family: "Roboto-Regular", sans-serif;

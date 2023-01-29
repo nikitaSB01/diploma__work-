@@ -135,6 +135,9 @@ header {
   &__body {
     padding-top: 72px;
     padding-bottom: 80px;
+    @media (max-width: 769px) {
+      padding-bottom: 48px;
+    }
   }
 
   &__search-form {
@@ -184,6 +187,9 @@ header {
       margin: 0px 0px 0px 0px;
       //padding: 0px 8px;
     }
+    @media (max-width: 440px) {
+      justify-content: center;
+    }
   }
 
   &__column {
@@ -194,7 +200,7 @@ header {
     @media (max-width: 769px) {
       @include mwh(368px, 100%, 346px, 100%);
       img {
-        @include mwh(368px, 100%, 256px, 100%);
+        @include mwh(308px, 100%, 256px, 100%);
       }
     }
     @media (max-width: 321px) {
@@ -246,6 +252,11 @@ header {
       font-size: 13px;
       line-height: 21px;
       color: #1d1d1d;
+    }
+  }
+  &__icon {
+    img {
+      @include mwh(368px, 100%, 256px, 100%);
     }
   }
 }

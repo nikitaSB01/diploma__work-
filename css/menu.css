@@ -146,8 +146,7 @@ body {
   .main__section-bacground {
     padding: 0px;
     width: 100%;
-    max-height: 255px;
-    height: 100%;
+    min-height: 255px;
   }
 }
 .main__section-two {
@@ -314,6 +313,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 @media (max-width: 440px) {
   .cards-item__flex-two {
@@ -321,6 +321,9 @@ body {
   }
 }
 .cards-item__title-subtitle h5 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-family: "Roboto-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -344,4 +347,21 @@ body {
   font-size: 15px;
   line-height: 21px;
   color: #1d1d1d;
+}
+
+.button-container {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+}
+.button-container__btn {
+  background-color: #59bd5a;
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 440px) {
+  .button-container__btn {
+    width: 64px;
+    height: 64px;
+  }
 }

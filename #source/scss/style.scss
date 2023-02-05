@@ -408,3 +408,19 @@ header {
     @include mwh(120px, 100%, 40px, 100%);
   }
 }
+.button-container {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  //@include mwh(80px, 100%, 80px, 100%);
+  &__btn {
+    background-color: #59bd5a;
+    width: 80px;
+    height: 80px;
+    @media (max-width: 440px) {
+      width: 64px;
+      height: 64px;
+    }
+    //@include mwh(80px, 100%, 80px, 100%);
+  }
+}

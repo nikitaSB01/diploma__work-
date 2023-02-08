@@ -150,8 +150,12 @@ body {
   }
 }
 .main__section-two {
-  max-height: 80px;
-  height: 100%;
+  min-height: 80px;
+}
+@media (max-width: 440px) {
+  .main__section-two {
+    min-height: 50px;
+  }
 }
 .container-section-bacground {
   max-width: 956px;
@@ -218,6 +222,13 @@ body {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
+@media (max-width: 440px) {
+  .section-two__nav {
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 .section-two__nav-item {
   text-decoration: none;
   font-family: "Roboto-Regular" sans-serif;
@@ -233,9 +244,84 @@ body {
   color: #327430;
 }
 
+.section-two__nav {
+  border-bottom: 1px solid #cfcece;
+}
+@media (max-width: 440px) {
+  .section-two__nav {
+    border-bottom: none;
+  }
+}
+
+.nav__navi {
+  display: flex;
+  justify-content: center;
+}
+
+.navi__nav ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media (max-width: 440px) {
+  .navi__nav ul {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    flex-direction: column;
+    min-height: 120px;
+    padding-bottom: 10px;
+  }
+}
+.navi__nav ul a {
+  color: #626262;
+}
+.navi__nav ul a:hover {
+  color: #327430;
+}
+.navi__nav ul a {
+  text-decoration: none;
+  font-family: "Roboto-Regular" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#icon-burger {
+  width: 30px;
+  height: 30px;
+}
+
+#burger,
+[for=burger] {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  [for=burger] {
+    display: block;
+    text-align: center;
+  }
+  nav {
+    display: none;
+    background: rgba(216, 243, 253, 0.6);
+  }
+  #burger:checked + label + nav {
+    display: block;
+  }
+}
 .section-three__header {
   padding-top: 56px;
   padding-bottom: 32px;
+  display: flex;
+}
+@media (max-width: 440px) {
+  .section-three__header {
+    padding-top: 0px;
+    justify-content: center;
+  }
 }
 .section-three__header h4 {
   font-family: "Roboto-Regular", sans-serif;

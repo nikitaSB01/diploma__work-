@@ -101,7 +101,10 @@ body {
     }
   }
   &__section-two {
-    @include mhh(80px, 100%);
+    min-height: 80px;
+    @media (max-width: 440px) {
+      min-height: 50px;
+    }
   }
 
   &__section-three {
@@ -164,6 +167,7 @@ body {
     }
   }
 }
+//!---------------------BURGER-------------------------------
 
 .section-two {
   &__nav {
@@ -172,6 +176,11 @@ body {
     justify-content: start;
     align-items: center;
     column-gap: 40px;
+    @media (max-width: 440px) {
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   &__nav-item {
@@ -193,10 +202,92 @@ body {
     line-height: 19px;
   }
 }
+//*----------------------------------------------------
+.section-two {
+  &__nav {
+    border-bottom: 1px solid #cfcece;
+    @media (max-width: 440px) {
+      border-bottom: none;
+    }
+  }
+}
+.nav {
+  &__navi {
+    display: flex;
+    justify-content: center;
+    //padding: 20px;
+  }
+}
+.navi {
+  &__nav ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 40px;
+    @media (max-width: 440px) {
+      column-gap: 10px;
+      flex-direction: column;
+      min-height: 120px;
+      padding-bottom: 10px;
+    }
+    a {
+      color: #626262;
+    }
+    a:hover {
+      color: #327430;
+    }
+    //&:visited {color: #d41919; }
+    //???????????????????????????????????????????????
+    a {
+      text-decoration: none;
+      font-family: "Roboto-Regular" sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+.navi {
+}
+
+#icon-burger {
+  width: 30px;
+  height: 30px;
+}
+#burger,
+[for="burger"] {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  [for="burger"] {
+    display: block;
+    //position: fixed;
+    // right: 20px;
+    // top: 20px;
+    text-align: center;
+  }
+  nav {
+    display: none;
+    background: rgba(216, 243, 253, 0.6);
+  }
+  #burger:checked + label + nav {
+    display: block;
+  }
+}
+//*----------------------------------------------------
+//!--------------------/BURGER--------------------------------
 .section-three {
   &__header {
     padding-top: 56px;
     padding-bottom: 32px;
+    display: flex;
+    @media (max-width: 440px) {
+      padding-top: 0px;
+      justify-content: center;
+    }
     h4 {
       font-family: "Roboto-Regular", sans-serif;
       font-style: normal;

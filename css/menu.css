@@ -306,7 +306,7 @@ body {
   }
   nav {
     display: none;
-    background: rgba(216, 243, 253, 0.6);
+    background: rgba(115, 165, 183, 0.6);
   }
   #burger:checked + label + nav {
     display: block;
